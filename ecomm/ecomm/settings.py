@@ -25,7 +25,11 @@ SECRET_KEY = '6zn05mva6#m&4_-lm#*p8-0ppvp61z@926#^aaka#r7pu+ou4_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
+
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+
 
 
 # Application definition
@@ -151,6 +155,9 @@ AUTH_USER_MODEL = 'users.User'
 STATIC_URL = '/static/'
 
 REST_USE_JWT = True
+
+
+
 
 
 ACCOUNT_AUTHENTICATION_METHOD = "email"
